@@ -10,7 +10,7 @@ export const LoginButton = () => {
       {user ? (
         <StyledButton onClick={logOut}>Logout</StyledButton>
       ) : (
-        <StyledButton onClick={() => logIn('Dear user')}>Login</StyledButton>
+        <StyledButton onClick={() => logIn('Dear User')}>Login</StyledButton>
       )}
     </>
   );

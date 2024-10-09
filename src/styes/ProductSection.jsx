@@ -96,3 +96,10 @@ export const StyledToast = styled.div`
   font-size: x-large;
   text-align: center;
 `;
+
+export const StyledUserGreeting = styled.section`
+  padding: 3rem 6rem;
+  display: flex;
+  flex-flow: column wrap;
+  text-align: center;
+`;
