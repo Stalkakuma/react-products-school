@@ -1,5 +1,6 @@
 import { StyledButtonSection, StyledLogo, StyledNav } from '../styes/NavBarStyles';
 import { StyledButton } from '../styes/GlobalStyles';
+import { LoginButton } from './LoginButton';
 
 export const NavBar = () => {
   return (
@@ -8,7 +9,7 @@ export const NavBar = () => {
       <StyledButtonSection>
         <StyledButton>Home</StyledButton>
         <StyledButton>School</StyledButton>
-        <StyledButton>Food</StyledButton>
+        <LoginButton />
       </StyledButtonSection>
     </StyledNav>
   );
