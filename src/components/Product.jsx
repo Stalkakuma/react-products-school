@@ -10,6 +10,7 @@ import {
   StyledModalCard,
   StyledModalButtonBox,
   StyledToast,
+  StyledModalImageBox,
 } from '../styes/ProductSection';
 import { useState } from 'react';
 
@@ -30,15 +31,15 @@ export const Product = ({ props }) => {
       {isModalOpen && (
         <StyledModalOverlay>
           <StyledModalCard>
-            <StyledImageBox>
+            <StyledModalImageBox>
               <StyledImage src={props.image} alt={props.title} />
               {showToast && (
                 <StyledToast>
                   <p>{props.title} added to cart!</p>
-                  <p>THANK YOU!</p>
+                  <p>Thank you!</p>
                 </StyledToast>
               )}
-            </StyledImageBox>
+            </StyledModalImageBox>
             <StyledCardInfo>
               <h2>{props.title}</h2>
               <span>
