@@ -9,7 +9,7 @@ export const shirtsList = [
   },
   {
     title: 'Watermelon',
-    image: 'https://tinyurl.com/p3zkpz69',
+    image: './image-tshirt.jpg',
     price: '25.00',
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. oluptatibus excepturi repellat ab, rerum totam autem sequi officia veritatis. Maxime, temporibus vel. Tenetur quibusdam, perferendis cupiditate iste cum voluptatem ab quis!',
     category: 'Woman',
@@ -25,7 +25,7 @@ export const shirtsList = [
   },
   {
     title: 'Creemee',
-    image: 'https://tinyurl.com/p3zkpz69',
+    image: './image-tshirt.jpg',
     price: '25.00',
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. oluptatibus excepturi repellat ab, rerum totam autem sequi officia veritatis. Maxime, temporibus vel. Tenetur quibusdam, perferendis cupiditate iste cum voluptatem ab quis!',
     category: 'Man',
@@ -42,7 +42,7 @@ export const shirtsList = [
   },
   {
     title: 'Avo',
-    image: 'https://tinyurl.com/p3zkpz69',
+    image: './image-tshirt.jpg',
     price: '25.00',
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. oluptatibus excepturi repellat ab, rerum totam autem sequi officia veritatis. Maxime, temporibus vel. Tenetur quibusdam, perferendis cupiditate iste cum voluptatem ab quis!',
     category: 'Man',
