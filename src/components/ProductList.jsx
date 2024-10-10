@@ -1,7 +1,6 @@
 import { Product } from './Product';
 import {
   StyledGrid,
-  StyledUserGreeting,
   StyledModalOverlay,
   StyledModalImageBox,
   StyledModalCard,
@@ -11,12 +10,10 @@ import {
   StyledToast,
 } from '../styes/ProductSection';
 import { StyledButton } from '../styes/GlobalStyles';
-import React, { useContext, useState, useEffect } from 'react';
-import { UserContext } from '../store/UserContext';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 export const ProductList = () => {
-  const { user } = useContext(UserContext);
   const [productList, setProductList] = useState([]);
   const [modalProduct, setModalProduct] = useState();
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -30,8 +27,8 @@ export const ProductList = () => {
   };
 
   const triggerToast = () => {
+    setIsModalOpen(false);
     setShowToast(true);
-
     setTimeout(() => {
       setShowToast(false);
     }, 3000);
@@ -52,7 +49,12 @@ export const ProductList = () => {
 
   return (
     <>
-      <StyledUserGreeting>{user ? <h2>Welcome {user.name}</h2> : <h2>You are not logged in!</h2>}</StyledUserGreeting>
+      {showToast && (
+        <StyledToast>
+          <p>{modalProduct?.title} added to cart!</p>
+          <p>Thank you!</p>
+        </StyledToast>
+      )}
       <StyledGrid>
         {productList.map((product) => (
           <Product key={product.title} product={product} handleShow={handleShow} />
@@ -64,24 +66,18 @@ export const ProductList = () => {
           <StyledModalCard>
             <StyledModalImageBox>
               <StyledImage src={modalProduct?.images[0]} alt={modalProduct?.title} />
-              {showToast && (
-                <StyledToast>
-                  <p>{modalProduct?.title} added to cart!</p>
-                  <p>Thank you!</p>
-                </StyledToast>
-              )}
+              <p>{modalProduct?.description}</p>
             </StyledModalImageBox>
             <StyledCardInfo>
               <h2>{modalProduct?.title}</h2>
               <span>
                 {modalProduct?.stock}/{modalProduct?.stock} units available
               </span>
-              <p>{modalProduct?.description}</p>
+              <StyledModalButtonBox>
+                <StyledButton onClick={() => triggerToast()}>Add to Cart</StyledButton>
+                <StyledButton onClick={() => changeModal()}>Close</StyledButton>
+              </StyledModalButtonBox>
             </StyledCardInfo>
-            <StyledModalButtonBox>
-              <StyledButton onClick={() => triggerToast()}>Add to Cart</StyledButton>
-              <StyledButton onClick={() => changeModal()}>Close</StyledButton>
-            </StyledModalButtonBox>
           </StyledModalCard>
         </StyledModalOverlay>
       )}

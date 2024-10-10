@@ -1,17 +1,21 @@
 import styled, { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
-  html, body {
-    font-family: Arial, sans-serif;
-    background-color: #7c7575;
-    height: 100%;
-  }
+  
 
   #root {
     --primaryPink: #f2cfcf;
     --backgroundGray: #7c7575;
     --lighterBackground: #968f8f;
+    --cardPink: #ff69b4;
+    --triadicBlue: #69b4ff;
 
+  }
+
+  html, body {
+    font-family: "Roboto", sans-serif;
+    background-color: #f2cfcf ;
+    height: 100%;
   }
 
   *, *::before, ::after {
@@ -26,7 +30,7 @@ export const StyledApp = styled.div`
 `;
 
 export const StyledButton = styled.button`
-  background-color: var(--backgroundGray);
+  background-color: var(--triadicBlue);
   color: white;
   border: none;
   padding: 1rem 2rem;

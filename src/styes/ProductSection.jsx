@@ -10,29 +10,27 @@ export const StyledGrid = styled.section`
 `;
 
 export const StyledImage = styled.img`
-  border: 2px solid var(--primaryPink);
-  border-radius: 1rem;
   max-height: 300px;
 `;
 
 export const StyledCardInfo = styled.div`
-  padding: 2rem;
+  padding: 1rem;
   display: flex;
-  flex-flow: column wrap;
-  gap: 1rem;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
 `;
 
 export const StyledCard = styled.article`
-  border: 4px solid var(--primaryPink);
   border-radius: 1rem;
-  background-color: var(--lighterBackground);
+  background-color: var(--cardPink);
   box-shadow: 10px 10px 10px gray;
   display: flex;
   flex-flow: column wrap;
   cursor: pointer;
 
   &:hover {
-    box-shadow: 0.5rem 0.5rem 1.2rem 0.4rem var(--primaryPink);
+    box-shadow: 0.5rem 0.5rem 1.2rem 0.4rem var(--backgroundGray);
   }
 `;
 
@@ -45,7 +43,11 @@ export const StyledImageBox = styled.div`
 `;
 
 export const StyledModalImageBox = styled(StyledImageBox)`
-  max-height: 30vh;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  font-size: large;
 `;
 
 export const StyledDiscountBox = styled.span`
@@ -73,9 +75,10 @@ export const StyledModalOverlay = styled.div`
 
 export const StyledModalCard = styled(StyledCard)`
   position: relative;
-  padding: 3rem;
+  padding: 1rem 2rem;
   width: 40%;
   width: 800px;
+  font-size: large;
 
   &:hover {
     box-shadow: none;
@@ -83,22 +86,23 @@ export const StyledModalCard = styled(StyledCard)`
 `;
 
 export const StyledModalButtonBox = styled.div`
+  margin-top: 1rem;
   display: flex;
-  padding: 0rem 2rem 0rem 2rem;
+  width: 100%;
   justify-content: space-between;
 `;
 
 export const StyledToast = styled.div`
-  background-color: var(--primaryPink);
-  position: absolute;
+  background-color: var(--triadicBlue);
+  position: relative;
   padding: 0.5rem 1rem;
   border-radius: 1rem;
   font-size: x-large;
   text-align: center;
+  margin: 1rem 30%;
 `;
 
 export const StyledUserGreeting = styled.section`
-  padding: 3rem 6rem;
   display: flex;
   flex-flow: column wrap;
   text-align: center;

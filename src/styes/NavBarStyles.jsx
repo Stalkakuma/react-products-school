@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const StyledNav = styled.nav`
   padding: 1rem 6rem;
-  background-color: var(--lighterBackground);
+  background-color: var(--cardPink);
   display: flex;
   gap: 1rem;
   flex-flow: row wrap;
@@ -11,11 +11,11 @@ export const StyledNav = styled.nav`
 `;
 
 export const StyledLogo = styled.h1`
-  background-color: var(--backgroundGray);
+  background-color: var(--triadicBlue);
   padding: 1rem 1.5rem;
   border-radius: 1rem;
   font-size: x-large;
-  color: var(--primaryPink);
+  color: white;
 `;
 
 export const StyledButtonSection = styled.section`
