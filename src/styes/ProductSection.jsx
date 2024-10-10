@@ -94,7 +94,8 @@ export const StyledModalButtonBox = styled.div`
 
 export const StyledToast = styled.div`
   background-color: var(--triadicBlue);
-  position: relative;
+  position: sticky;
+  top: 0;
   padding: 0.5rem 1rem;
   border-radius: 1rem;
   font-size: x-large;

@@ -19,7 +19,6 @@ export const ProductList = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [showToast, setShowToast] = useState(false);
   const changeModal = () => setIsModalOpen(false);
-  console.log(productList);
 
   const handleShow = (product) => {
     setModalProduct(product);
@@ -49,6 +48,7 @@ export const ProductList = () => {
 
   return (
     <>
+      {productList.length === 0 && <StyledToast>Loading...</StyledToast>}
       {showToast && (
         <StyledToast>
           <p>{modalProduct?.title} added to cart!</p>
