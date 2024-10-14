@@ -3,10 +3,9 @@ import styled from 'styled-components';
 export const StyledGrid = styled.section`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  max-width: 250rem;
   gap: 3rem;
   padding: 3rem 6rem;
-  align-content: center;
+  width: 100%;
 `;
 
 export const StyledImage = styled.img`

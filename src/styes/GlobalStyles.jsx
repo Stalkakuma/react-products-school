@@ -14,6 +14,7 @@ export const GlobalStyle = createGlobalStyle`
     font-family: "Roboto", sans-serif;
     background-color: #F6F1EE ;
     height: 100%;
+    color: white;
   }
 
   *, *::before, ::after {
@@ -23,8 +24,10 @@ export const GlobalStyle = createGlobalStyle`
   }
 `;
 
-export const StyledApp = styled.div`
-  color: white;
+export const StyledApp = styled.main`
+  display: flex;
+  flex-flow: column wrap;
+  align-content: center;
 `;
 
 export const StyledButton = styled.button`
