@@ -40,3 +40,23 @@ export const StyledButton = styled.button`
     outline: var(--backgroundGray) solid 0.5rem;
   }
 `;
+
+export const StyledLoader = styled.span`
+  width: 48px;
+  height: 48px;
+  border: 5px solid #fff;
+  border-bottom-color: var(--lighterBackground);
+  border-radius: 50%;
+  display: inline-block;
+  animation: rotation 1s linear infinite;
+  align-self: center;
+
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+`;

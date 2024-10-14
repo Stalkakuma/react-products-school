@@ -27,7 +27,10 @@ export const StyledCard = styled.article`
   background-color: var(--card);
   box-shadow: 10px 10px 10px gray;
   display: flex;
+  align-content: center;
+  justify-content: center;
   flex-flow: column wrap;
+  min-height: 447px;
   cursor: pointer;
 
   &:hover {

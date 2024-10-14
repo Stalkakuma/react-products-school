@@ -13,6 +13,7 @@ import {
 import { StyledButton } from '../styes/GlobalStyles';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { LoadingScreen } from './loadingScreen/LoadingScreen';
 
 export const ProductList = () => {
   const [productList, setProductList] = useState([]);
@@ -20,6 +21,7 @@ export const ProductList = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [showToast, setShowToast] = useState(false);
   const changeModal = () => setIsModalOpen(false);
+  const isLoading = productList.length === 0;
 
   const handleShow = (product) => {
     setModalProduct(product);
@@ -49,7 +51,11 @@ export const ProductList = () => {
 
   return (
     <>
-      {productList.length === 0 && <StyledToast>Loading...</StyledToast>}
+      {isLoading && (
+        <StyledGrid>
+          <LoadingScreen />
+        </StyledGrid>
+      )}
       {showToast && (
         <StyledToast>
           <p>{modalProduct?.title} added to cart!</p>
