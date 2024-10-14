@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const StyledNav = styled.nav`
   padding: 1rem 6rem;
-  background-color: var(--cardPink);
+  background-color: var(--lighterBackground);
   display: flex;
   gap: 1rem;
   flex-flow: row wrap;
@@ -11,7 +11,7 @@ export const StyledNav = styled.nav`
 `;
 
 export const StyledLogo = styled.h1`
-  background-color: var(--triadicBlue);
+  background-color: var(--card);
   padding: 1rem 1.5rem;
   border-radius: 1rem;
   font-size: x-large;

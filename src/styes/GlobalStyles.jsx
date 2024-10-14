@@ -4,17 +4,15 @@ export const GlobalStyle = createGlobalStyle`
   
 
   #root {
-    --primaryPink: #f2cfcf;
-    --backgroundGray: #7c7575;
-    --lighterBackground: #968f8f;
-    --cardPink: #ff69b4;
-    --triadicBlue: #69b4ff;
+    --backgroundGray: #4F4A45;
+    --lighterBackground: #6C5F5B;
+    --card: #ED7D31;
 
   }
 
   html, body {
     font-family: "Roboto", sans-serif;
-    background-color: #f2cfcf ;
+    background-color: #F6F1EE ;
     height: 100%;
   }
 
@@ -30,7 +28,7 @@ export const StyledApp = styled.div`
 `;
 
 export const StyledButton = styled.button`
-  background-color: var(--triadicBlue);
+  background-color: var(--card);
   color: white;
   border: none;
   padding: 1rem 2rem;
@@ -39,6 +37,6 @@ export const StyledButton = styled.button`
   cursor: pointer;
 
   &:hover {
-    background-color: var(--primaryPink);
+    outline: var(--backgroundGray) solid 0.5rem;
   }
 `;

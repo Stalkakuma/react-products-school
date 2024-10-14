@@ -8,6 +8,7 @@ import {
   StyledCardInfo,
   StyledModalButtonBox,
   StyledToast,
+  StyledModalCardWrapper,
 } from '../styes/ProductSection';
 import { StyledButton } from '../styes/GlobalStyles';
 import React, { useState, useEffect } from 'react';
@@ -63,22 +64,24 @@ export const ProductList = () => {
 
       {isModalOpen && (
         <StyledModalOverlay>
-          <StyledModalCard>
-            <StyledModalImageBox>
-              <StyledImage src={modalProduct?.images[0]} alt={modalProduct?.title} />
-              <p>{modalProduct?.description}</p>
-            </StyledModalImageBox>
-            <StyledCardInfo>
-              <h2>{modalProduct?.title}</h2>
-              <span>
-                {modalProduct?.stock}/{modalProduct?.stock} units available
-              </span>
-              <StyledModalButtonBox>
-                <StyledButton onClick={() => triggerToast()}>Add to Cart</StyledButton>
-                <StyledButton onClick={() => changeModal()}>Close</StyledButton>
-              </StyledModalButtonBox>
-            </StyledCardInfo>
-          </StyledModalCard>
+          <StyledModalCardWrapper>
+            <StyledModalCard>
+              <StyledModalImageBox>
+                <StyledImage src={modalProduct?.images[0]} alt={modalProduct?.title} />
+                <p>{modalProduct?.description}</p>
+              </StyledModalImageBox>
+              <StyledCardInfo>
+                <h2>{modalProduct?.title}</h2>
+                <span>
+                  {modalProduct?.stock}/{modalProduct?.stock} units available
+                </span>
+              </StyledCardInfo>
+            </StyledModalCard>
+            <StyledModalButtonBox>
+              <StyledButton onClick={() => triggerToast()}>Add to Cart</StyledButton>
+              <StyledButton onClick={() => changeModal()}>Close</StyledButton>
+            </StyledModalButtonBox>
+          </StyledModalCardWrapper>
         </StyledModalOverlay>
       )}
     </>

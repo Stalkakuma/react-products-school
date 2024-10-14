@@ -11,6 +11,7 @@ export const StyledGrid = styled.section`
 
 export const StyledImage = styled.img`
   max-height: 300px;
+  object-fit: contain;
 `;
 
 export const StyledCardInfo = styled.div`
@@ -23,7 +24,7 @@ export const StyledCardInfo = styled.div`
 
 export const StyledCard = styled.article`
   border-radius: 1rem;
-  background-color: var(--cardPink);
+  background-color: var(--card);
   box-shadow: 10px 10px 10px gray;
   display: flex;
   flex-flow: column wrap;
@@ -38,8 +39,7 @@ export const StyledImageBox = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 2rem;
-  max-height: 300px;
+  padding: 2rem 1rem;
 `;
 
 export const StyledModalImageBox = styled(StyledImageBox)`
@@ -52,7 +52,6 @@ export const StyledModalImageBox = styled(StyledImageBox)`
 
 export const StyledDiscountBox = styled.span`
   background-color: #e0a330;
-  border: 2px solid var(--primaryPink);
   border-radius: 0.2rem;
   padding: 0 8pt 0pt 8pt;
   font-size: large;
@@ -71,29 +70,37 @@ export const StyledModalOverlay = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-flow: column wrap;
 `;
 
 export const StyledModalCard = styled(StyledCard)`
   position: relative;
+  border-radius: 0%;
   padding: 1rem 2rem;
-  width: 40%;
-  width: 800px;
   font-size: large;
+  cursor: auto;
+  box-shadow: none;
 
   &:hover {
     box-shadow: none;
   }
 `;
 
+export const StyledModalCardWrapper = styled.div`
+  background-color: var(--lighterBackground);
+  border-radius: 1rem;
+  width: 50%;
+  overflow: hidden;
+`;
+
 export const StyledModalButtonBox = styled.div`
-  margin-top: 1rem;
   display: flex;
-  width: 100%;
   justify-content: space-between;
+  padding: 1rem 3rem;
 `;
 
 export const StyledToast = styled.div`
-  background-color: var(--triadicBlue);
+  background-color: var(--card);
   position: sticky;
   top: 0;
   padding: 0.5rem 1rem;
