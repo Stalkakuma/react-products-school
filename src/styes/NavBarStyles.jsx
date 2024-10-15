@@ -10,7 +10,7 @@ export const StyledNav = styled.nav`
   justify-content: space-between;
 `;
 
-export const StyledLogo = styled.h1`
+export const StyledLogo = styled.p`
   background-color: var(--card);
   padding: 1rem 1.5rem;
   border-radius: 1rem;
@@ -18,7 +18,7 @@ export const StyledLogo = styled.h1`
   color: white;
 `;
 
-export const StyledButtonSection = styled.section`
+export const StyledButtonSection = styled.nav`
   display: flex;
   gap: 1rem;
 `;

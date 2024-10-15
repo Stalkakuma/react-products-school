@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const GlobalStyle = createGlobalStyle`
   
@@ -26,13 +27,12 @@ export const GlobalStyle = createGlobalStyle`
 
 export const StyledApp = styled.main`
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
   align-content: center;
 `;
 
 export const StyledButton = styled.button`
   background-color: var(--card);
-  color: white;
   border: none;
   padding: 1rem 2rem;
   border-radius: 1rem;
@@ -61,5 +61,26 @@ export const StyledLoader = styled.span`
     100% {
       transform: rotate(360deg);
     }
+  }
+`;
+
+export const StyledSizingWrapper = styled.div`
+  padding: 1rem 6rem;
+  height: 100%;
+  width: 100%;
+`;
+
+export const StyledGlobalLink = styled(Link)`
+  background-color: var(--card);
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  font-size: large;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+
+  &:hover {
+    outline: var(--backgroundGray) solid 0.5rem;
   }
 `;
