@@ -103,13 +103,18 @@ export const StyledModalButtonBox = styled.div`
 
 export const StyledToast = styled.div`
   background-color: var(--card);
-  position: sticky;
+  border: 5pt solid var(--backgroundGray);
+  position: fixed;
   top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 10%;
   padding: 0.5rem 1rem;
   border-radius: 1rem;
   font-size: x-large;
   text-align: center;
-  margin: 1rem 30%;
+  margin: 8rem 30%;
 `;
 
 export const StyledUserGreeting = styled.section`
