@@ -14,6 +14,7 @@ import { StyledButton } from '../styes/GlobalStyles';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { LoadingScreen } from './loadingScreen/LoadingScreen';
+import { Link } from 'react-router-dom';
 
 export const ProductList = () => {
   const [productList, setProductList] = useState([]);
@@ -86,6 +87,7 @@ export const ProductList = () => {
             <StyledModalButtonBox>
               <StyledButton onClick={() => triggerToast()}>Add to Cart</StyledButton>
               <StyledButton onClick={() => changeModal()}>Close</StyledButton>
+              <Link to={`${modalProduct?.id}`}>Link to</Link>
             </StyledModalButtonBox>
           </StyledModalCardWrapper>
         </StyledModalOverlay>
