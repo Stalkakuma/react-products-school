@@ -14,7 +14,7 @@ export const GlobalStyle = createGlobalStyle`
   html, body {
     font-family: "Roboto", sans-serif;
     background-color: #F6F1EE ;
-    height: 100%;
+    height: 100vh;
     color: white;
   }
 
@@ -22,6 +22,10 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+  }
+
+  img {
+    width: 100%;
   }
 `;
 

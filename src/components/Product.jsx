@@ -1,6 +1,5 @@
 import { calculatePrice } from '../scripts/conversions';
 import { StyledCardInfo, StyledImage, StyledCard, StyledImageBox, StyledDiscountBox } from '../styes/ProductSection';
-import { Link } from 'react-router-dom';
 
 export const Product = ({ product, handleShow }) => {
   const { title, description, images, price, stock, discountPercentage, availabilityStatus, id } = product;
@@ -18,8 +17,7 @@ export const Product = ({ product, handleShow }) => {
         </StyledImageBox>
         <StyledCardInfo>
           <h2>{title}</h2>
-          <span>{discountPercentage ? calculatePrice(parseInt(price), discountPercentage) : price}</span>
-          <Link to={id}>Link to</Link>
+          <span>{discountPercentage ? calculatePrice(parseInt(price), discountPercentage) : price}&euro;</span>
         </StyledCardInfo>
       </StyledCard>
     </>

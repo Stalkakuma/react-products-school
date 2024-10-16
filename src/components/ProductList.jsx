@@ -14,9 +14,10 @@ import { StyledButton } from '../styes/GlobalStyles';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { LoadingScreen } from './loadingScreen/LoadingScreen';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export const ProductList = () => {
+  const navigate = useNavigate();
   const [productList, setProductList] = useState([]);
   const [modalProduct, setModalProduct] = useState();
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -27,6 +28,10 @@ export const ProductList = () => {
   const handleShow = (product) => {
     setModalProduct(product);
     setIsModalOpen(true);
+  };
+
+  const handleNavigate = () => {
+    navigate(`/react-products-school/products/${modalProduct?.id}`);
   };
 
   const triggerToast = () => {
@@ -86,8 +91,8 @@ export const ProductList = () => {
             </StyledModalCard>
             <StyledModalButtonBox>
               <StyledButton onClick={() => triggerToast()}>Add to Cart</StyledButton>
+              <StyledButton onClick={() => handleNavigate()}>Read more</StyledButton>
               <StyledButton onClick={() => changeModal()}>Close</StyledButton>
-              <Link to={`${modalProduct?.id}`}>Link to</Link>
             </StyledModalButtonBox>
           </StyledModalCardWrapper>
         </StyledModalOverlay>
