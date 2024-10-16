@@ -15,5 +15,6 @@ export const StyledLoginCard = styled.article`
   justify-content: center;
   gap: 2rem;
   border-radius: 15pt;
+  margin-top: 1rem;
   height: 70vh;
 `;

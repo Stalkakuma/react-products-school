@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledNav = styled.nav`
-  padding: 1rem 6rem;
+  padding: 1rem 6rem 2rem 6rem;
   background-color: var(--lighterBackground);
   display: flex;
   gap: 1rem;

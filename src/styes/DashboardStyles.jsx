@@ -42,6 +42,7 @@ export const StyledServicesContainer = styled.section`
 export const StyledServices = styled.article`
   display: flex;
   flex-flow: column wrap;
+  padding-top: 1rem;
   gap: 1rem;
 `;
 
