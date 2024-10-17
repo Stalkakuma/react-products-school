@@ -14,9 +14,7 @@ export const NavBar = () => {
       <StyledButtonSection>
         <StyledGlobalLink to={'/react-products-school/'}>Home</StyledGlobalLink>
         <StyledGlobalLink to={'/react-products-school/products'}>Products</StyledGlobalLink>
-        <StyledGlobalLink to={user ? '/react-products-school/product-form' : '/react-products-school/user'}>
-          {user ? 'Create' : 'Login to Create'}
-        </StyledGlobalLink>
+        <StyledGlobalLink to={'/react-products-school/product-form'}>Create</StyledGlobalLink>
         <StyledGlobalLink to={'/react-products-school/user'}>{user ? 'Profile' : 'Login'}</StyledGlobalLink>
       </StyledButtonSection>
     </StyledNav>
