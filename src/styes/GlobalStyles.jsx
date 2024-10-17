@@ -42,6 +42,7 @@ export const StyledButton = styled.button`
   border-radius: 1rem;
   font-size: large;
   cursor: pointer;
+  color: white;
 
   &:hover {
     outline: var(--backgroundGray) solid 0.5rem;
