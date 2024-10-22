@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 import { Dashboard } from '../Dashboard';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Link } from 'react-router-dom';
 
 const renderWithRouter = (component) => {
   return {
@@ -10,4 +10,6 @@ const renderWithRouter = (component) => {
 
 test('should render dashboard page', () => {
   renderWithRouter(<Dashboard />);
+  const { container } = renderWithRouter(<Dashboard />);
+  expect(container.innerHTML).toMatch('Welcome');
 });
